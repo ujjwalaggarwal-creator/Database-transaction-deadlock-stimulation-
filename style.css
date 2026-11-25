@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #17233b;
+    padding: 25px;
+    margin: 0;
+}
+
+h1 {
+    background: #17233b;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+body > p {
+    text-align: center;
+    color: #555;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+h2 {
+    color: #17233b;
+}
+
+input, select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#rollback {
+    background: #dc2626;
+}
+
+#commit {
+    background: #16a34a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #17233b;
+    color: white;
+}
+
+#result {
+    color: #dc2626;
+}
+
+#logs {
+    line-height: 2;
+}

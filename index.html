@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Transaction & Deadlock Simulator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <h1>Database Transaction & Deadlock Simulator</h1>
+    <p>Phase II Project Demonstration</p>
+
+<section id="bankingDashboard">
+    <h2>Banking Dashboard</h2>
+    <p>Manage sample bank accounts and money transfers.</p>
+
+    <div style="display:flex; gap:20px; flex-wrap:wrap;">
+
+        <div style="background:#e0f2fe;padding:20px;
+        border-radius:10px;min-width:180px;">
+            <h3>Customer A</h3>
+            <p>Account: 1001</p>
+            <h2 id="balance1001">₹50,000</h2>
+        </div>
+
+        <div style="background:#dcfce7;padding:20px;
+        border-radius:10px;min-width:180px;">
+            <h3>Customer B</h3>
+            <p>Account: 1002</p>
+            <h2 id="balance1002">₹30,000</h2>
+        </div>
+
+    </div>
+
+    <h3>Transfer Money</h3>
+
+    <label>Sender Account</label>
+    <select id="bankSender">
+        <option value="1001">Customer A - 1001</option>
+        <option value="1002">Customer B - 1002</option>
+    </select>
+
+    <br><br>
+
+    <label>Receiver Account</label>
+    <select id="bankReceiver">
+        <option value="1002">Customer B - 1002</option>
+        <option value="1001">Customer A - 1001</option>
+    </select>
+
+    <br><br>
+
+    <label>Transfer Amount (₹)</label>
+    <input type="number" id="transferAmount"
+           placeholder="Enter amount" min="0.01" step="0.01">
+
+    <br><br>
+
+    <button id="transferButton">Transfer Money</button>
+
+    <h3 id="transferMessage"></h3>
+</section>
+
+
+    <section>
+        <h2>Create Transaction</h2>
+        <input id="tName" placeholder="Enter T1, T2, etc.">
+        <button id="createTransaction">Create Transaction</button>
+    </section>
+
+    <section>
+        <h2>Create Resource</h2>
+        <input id="rName" placeholder="Enter R1, R2, etc.">
+        <button id="createResource">Create Resource</button>
+    </section>
+
+    <section>
+        <h2>Request a Resource</h2>
+
+        <select id="txSelect">
+            <option value="">Select Transaction</option>
+        </select>
+
+        <select id="resSelect">
+            <option value="">Select Resource</option>
+        </select>
+
+        <button id="requestResource">Request Resource</button>
+    </section>
+
+    <section>
+        <h2>Commit / Rollback</h2>
+
+        <select id="finishTx">
+            <option value="">Select Transaction</option>
+        </select>
+
+        <button id="commit">Commit</button>
+        <button id="rollback">Rollback</button>
+    </section>
+
+    <section>
+        <h2>Deadlock Detection</h2>
+        <button id="detect">Detect Deadlock</button>
+        <button id="recover">Recover Deadlock</button>
+        <button id="reset">Reset Simulator</button>
+        <h3 id="result">No detection performed yet.</h3>
+        <div id="graph"></div>
+    </section>
+
+    <section>
+        <h2>Transaction Details</h2>
+        <div id="transactionTable"></div>
+    </section>
+
+    <section>
+        <h2>Resource Details</h2>
+        <div id="resourceTable"></div>
+    </section>
+
+    <section>
+        <h2>Waiting Requests</h2>
+        <div id="waitingTable"></div>
+    </section>
+
+    <section>
+        <h2>Activity Logs</h2>
+        <div id="logs"></div>
+    </section>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
